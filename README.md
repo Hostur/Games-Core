@@ -25,7 +25,7 @@ You can extend this functionality - for example by registration dependency for p
 
 Desktop version care about registration as implemented interfaces, disposable and keyed registration that helps later with injecting types into GameObjects.
 
-This automated resolve is implemented <a href="https://github.com/Hostur/GamesCore/blob/master/Assets/_Scripts/Core/DI/RegisterAssemblyModule.cs" target="_blank">`here`</a>
+This automated resolve is implemented <a href="https://github.com/Hostur/Games-Core/blob/master/Assets/_Scripts/Core/DI/RegisterAssemblyModule.cs" target="_blank">`here`</a>
 
 As you can see, mobile registration is not fully automated. Thats because of dynamic compilation used by Autofac.
 
@@ -58,7 +58,7 @@ public class ExampleClass : CoreBehaviour
 ```
 
 Injection happening inside <a href="https://github.com/Hostur/GamesCore/blob/master/Assets/_Scripts/Core/CoreBehaviour.cs" target="_blank">`CoreBehaviour`</a> Awake function
-by calling static extension from <a href="https://github.com/Hostur/GamesCore/blob/master/Assets/_Scripts/Core/DI/RunetimeDependencyProvider.cs" target="_blank">`RunetimeDependencyProvider`</a>.
+by calling static extension from <a href="https://github.com/Hostur/Games-Core/blob/master/Assets/_Scripts/Core/DI/RunetimeDependencyProvider.cs" target="_blank">`RunetimeDependencyProvider`</a>.
 
 You can call it in any other place to resolve all the fields marked by [CoreInject] attribute.
 
@@ -79,7 +79,7 @@ private void SomeFunction()
 ## Internal communication - events
 
 Each other functionality is built at the top of this DI.
-You can use internal communication provided by <a href="https://github.com/Hostur/GamesCore/blob/master/Assets/_Scripts/Core/InternalCommunication/CoreGameEventsManager.cs" target="_blank">`CoreGameEventsManager`</a>.
+You can use internal communication provided by <a href="https://github.com/Hostur/Games-Core/blob/master/Assets/_Scripts/Core/InternalCommunication/CoreGameEventsManager.cs" target="_blank">`CoreGameEventsManager`</a>.
 You can subscribe for certain types of events that you will create by yourself:
 
 ```
