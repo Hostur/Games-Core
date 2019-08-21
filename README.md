@@ -57,7 +57,7 @@ public class ExampleClass : CoreBehaviour
 }
 ```
 
-Injection happening inside <a href="https://github.com/Hostur/GamesCore/blob/master/Assets/_Scripts/Core/CoreBehaviour.cs" target="_blank">`CoreBehaviour`</a> Awake function
+Injection happening inside <a href="https://github.com/Hostur/Games-Core/blob/master/Assets/_Scripts/Core/CoreBehaviour.cs" target="_blank">`CoreBehaviour`</a> Awake function
 by calling static extension from <a href="https://github.com/Hostur/Games-Core/blob/master/Assets/_Scripts/Core/DI/RunetimeDependencyProvider.cs" target="_blank">`RunetimeDependencyProvider`</a>.
 
 You can call it in any other place to resolve all the fields marked by [CoreInject] attribute.
