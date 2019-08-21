@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 3999063816
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: datasource
+      Dependencies: {}
