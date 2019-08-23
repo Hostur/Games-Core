@@ -34,6 +34,7 @@ namespace Core
 
     protected void Awake()
     {
+      this.AssertSerializeFields();
       OnBeforeInjection();
       this.InjectComponents();
       this.FindComponents();

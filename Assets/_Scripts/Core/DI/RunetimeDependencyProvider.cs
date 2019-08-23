@@ -4,6 +4,7 @@ using System.Reflection;
 using Core.Attributes;
 using Core.InternalCommunication;
 using Core.Reflection;
+using Development.Logging;
 using UnityEngine;
 
 namespace Core.DI
@@ -120,6 +121,12 @@ namespace Core.DI
 
         CoreGameEventsManager.Unsubscribe(attribute.EventType, handler);
       }
+    }
+
+    public static void AssertSerializeFields<T>(this T obj) where T : CoreBehaviour
+    {
+      foreach (FieldInfo fieldInfo in obj.GetFieldsWithAttribute<T, SerializeField>().Where(f => f.GetValue(obj) == null))
+        obj.Log($"SerializeField {fieldInfo.Name} not assigned.", LogLevel.Error);
     }
   }
 }
